@@ -110,7 +110,7 @@ Eglis Feliz
 
 GitHub: @EglisF
 
-LinkedIn:(https://www.linkedin.com/in/eglis-feliz-474446368/)
+LinkedIn:https://www.linkedin.com/in/eglis-feliz-474446368/
 
 🙏 Agradecimientos
 Inspirado en las necesidades de transporte de Santo Domingo
