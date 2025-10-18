@@ -1,0 +1,799 @@
+{
+  "neighborhoods": [
+    "Zona Colonial",
+    "Gazcue",
+    "Naco",
+    "Piantini",
+    "Bella Vista",
+    "Los Mina",
+    "Villa Mella",
+    "Herrera",
+    "San Carlos",
+    "Cristo Rey",
+    "Los Alcarrizos",
+    "Santo Domingo Oeste",
+    "Boca Chica",
+    "Villa Duarte",
+    "Los Tres Ojos",
+    "Arroyo Hondo",
+    "La Esperilla",
+    "Ciudad Nueva"
+  ],
+  "routes": [
+    {
+      "id": 1,
+      "from": "Zona Colonial",
+      "to": "Naco",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 15,
+          "cost": 25,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "from": "Zona Colonial",
+      "to": "Gazcue",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 8,
+          "cost": 20,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "from": "Zona Colonial",
+      "to": "Bella Vista",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 18,
+          "cost": 30,
+          "conditions": [
+            {
+              "name": "hora_pico",
+              "pct": 35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "from": "Gazcue",
+      "to": "Piantini",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 8,
+          "cost": 25,
+          "conditions": [
+            {
+              "name": "hora_pico",
+              "pct": 40
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "from": "Gazcue",
+      "to": "Los Mina",
+      "segments": [
+        {
+          "type": "guagua",
+          "time": 28,
+          "cost": 35,
+          "conditions": [
+            {
+              "name": "lluvia",
+              "pct": 40
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "from": "Naco",
+      "to": "Bella Vista",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 5,
+          "cost": 25,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "from": "Naco",
+      "to": "Piantini",
+      "segments": [
+        {
+          "type": "motoconcho",
+          "time": 6,
+          "cost": 40,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "from": "Piantini",
+      "to": "Cristo Rey",
+      "segments": [
+        {
+          "type": "guagua",
+          "time": 15,
+          "cost": 25,
+          "conditions": [
+            {
+              "name": "hora_pico",
+              "pct": 30
+            }
+          ]
+        },
+        {
+          "type": "motoconcho",
+          "time": 8,
+          "cost": 40,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "from": "Piantini",
+      "to": "Arroyo Hondo",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 10,
+          "cost": 30,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "from": "Bella Vista",
+      "to": "La Esperilla",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 7,
+          "cost": 25,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "from": "Los Mina",
+      "to": "Zona Colonial",
+      "segments": [
+        {
+          "type": "guagua",
+          "time": 25,
+          "cost": 30,
+          "conditions": [
+            {
+              "name": "hora_pico",
+              "pct": 35
+            }
+          ]
+        },
+        {
+          "type": "concho",
+          "time": 10,
+          "cost": 25,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "from": "Los Mina",
+      "to": "Villa Duarte",
+      "segments": [
+        {
+          "type": "guagua",
+          "time": 15,
+          "cost": 25,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "from": "Villa Mella",
+      "to": "Gazcue",
+      "segments": [
+        {
+          "type": "guagua",
+          "time": 30,
+          "cost": 35,
+          "conditions": [
+            {
+              "name": "hora_pico",
+              "pct": 45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "from": "Villa Mella",
+      "to": "Los Alcarrizos",
+      "segments": [
+        {
+          "type": "guagua",
+          "time": 35,
+          "cost": 40,
+          "conditions": [
+            {
+              "name": "hora_pico",
+              "pct": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "from": "Herrera",
+      "to": "Naco",
+      "segments": [
+        {
+          "type": "motoconcho",
+          "time": 15,
+          "cost": 60,
+          "conditions": [
+            {
+              "name": "lluvia",
+              "pct": 45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "from": "Herrera",
+      "to": "Cristo Rey",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 12,
+          "cost": 30,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "from": "San Carlos",
+      "to": "Gazcue",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 10,
+          "cost": 25,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "from": "San Carlos",
+      "to": "Ciudad Nueva",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 15,
+          "cost": 35,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "from": "Cristo Rey",
+      "to": "Villa Duarte",
+      "segments": [
+        {
+          "type": "guagua",
+          "time": 20,
+          "cost": 30,
+          "conditions": [
+            {
+              "name": "lluvia",
+              "pct": 35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "from": "Cristo Rey",
+      "to": "Los Tres Ojos",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 8,
+          "cost": 25,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "from": "Los Alcarrizos",
+      "to": "Gazcue",
+      "segments": [
+        {
+          "type": "carro_publico",
+          "time": 20,
+          "cost": 50,
+          "conditions": [
+            {
+              "name": "hora_pico",
+              "pct": 25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "from": "Los Alcarrizos",
+      "to": "Santo Domingo Oeste",
+      "segments": [
+        {
+          "type": "guagua",
+          "time": 25,
+          "cost": 30,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "from": "Santo Domingo Oeste",
+      "to": "Boca Chica",
+      "segments": [
+        {
+          "type": "guagua",
+          "time": 45,
+          "cost": 60,
+          "conditions": [
+            {
+              "name": "hora_pico",
+              "pct": 40
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "from": "Santo Domingo Oeste",
+      "to": "Gazcue",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 25,
+          "cost": 40,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "from": "Boca Chica",
+      "to": "Zona Colonial",
+      "segments": [
+        {
+          "type": "guagua",
+          "time": 50,
+          "cost": 65,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "from": "Boca Chica",
+      "to": "Los Tres Ojos",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 20,
+          "cost": 35,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "from": "Villa Duarte",
+      "to": "Cristo Rey",
+      "segments": [
+        {
+          "type": "guagua",
+          "time": 20,
+          "cost": 30,
+          "conditions": [
+            {
+              "name": "lluvia",
+              "pct": 35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "from": "Villa Duarte",
+      "to": "Los Mina",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 12,
+          "cost": 30,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "from": "Los Tres Ojos",
+      "to": "Boca Chica",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 18,
+          "cost": 35,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "from": "Los Tres Ojos",
+      "to": "Cristo Rey",
+      "segments": [
+        {
+          "type": "motoconcho",
+          "time": 10,
+          "cost": 45,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "from": "Arroyo Hondo",
+      "to": "Zona Colonial",
+      "segments": [
+        {
+          "type": "guagua",
+          "time": 22,
+          "cost": 30,
+          "conditions": [
+            {
+              "name": "hora_pico",
+              "pct": 38
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "from": "Arroyo Hondo",
+      "to": "Piantini",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 8,
+          "cost": 25,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "from": "La Esperilla",
+      "to": "Naco",
+      "segments": [
+        {
+          "type": "motoconcho",
+          "time": 8,
+          "cost": 50,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "from": "La Esperilla",
+      "to": "Bella Vista",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 6,
+          "cost": 25,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "from": "Ciudad Nueva",
+      "to": "Piantini",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 12,
+          "cost": 25,
+          "conditions": [
+            {
+              "name": "hora_pico",
+              "pct": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "from": "Ciudad Nueva",
+      "to": "San Carlos",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 15,
+          "cost": 35,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "from": "Ciudad Nueva",
+      "to": "Zona Colonial",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 5,
+          "cost": 20,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "from": "Gazcue",
+      "to": "Zona Colonial",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 8,
+          "cost": 20,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "from": "Naco",
+      "to": "Zona Colonial",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 15,
+          "cost": 25,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "from": "Piantini",
+      "to": "Gazcue",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 10,
+          "cost": 25,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "from": "Bella Vista",
+      "to": "Zona Colonial",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 18,
+          "cost": 30,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "from": "Los Mina",
+      "to": "Gazcue",
+      "segments": [
+        {
+          "type": "guagua",
+          "time": 25,
+          "cost": 30,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "from": "Gazcue",
+      "to": "Villa Mella",
+      "segments": [
+        {
+          "type": "guagua",
+          "time": 30,
+          "cost": 35,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "from": "Cristo Rey",
+      "to": "Piantini",
+      "segments": [
+        {
+          "type": "guagua",
+          "time": 15,
+          "cost": 25,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "from": "San Carlos",
+      "to": "Ciudad Nueva",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 15,
+          "cost": 35,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "from": "Arroyo Hondo",
+      "to": "Naco",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 12,
+          "cost": 30,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "from": "La Esperilla",
+      "to": "Piantini",
+      "segments": [
+        {
+          "type": "motoconcho",
+          "time": 7,
+          "cost": 45,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "from": "Santo Domingo Oeste",
+      "to": "Los Alcarrizos",
+      "segments": [
+        {
+          "type": "guagua",
+          "time": 20,
+          "cost": 25,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "from": "Boca Chica",
+      "to": "Los Tres Ojos",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 18,
+          "cost": 35,
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "from": "Villa Duarte",
+      "to": "Los Mina",
+      "segments": [
+        {
+          "type": "concho",
+          "time": 12,
+          "cost": 30,
+          "conditions": []
+        }
+      ]
+    }
+  ],
+  "transportTypes": {
+    "concho": {
+      "name": "Concho",
+      "description": "Vehículo compartido de ruta fija",
+      "capacity": 6,
+      "avgSpeed": 25
+    },
+    "guagua": {
+      "name": "Guagua",
+      "description": "Autobús de transporte público",
+      "capacity": 40,
+      "avgSpeed": 30
+    },
+    "carro_publico": {
+      "name": "Carro Público",
+      "description": "Taxi compartido de ruta",
+      "capacity": 5,
+      "avgSpeed": 35
+    },
+    "motoconcho": {
+      "name": "Motoconcho",
+      "description": "Motocicleta taxi",
+      "capacity": 2,
+      "avgSpeed": 40
+    }
+  },
+  "conditions": {
+    "lluvia": {
+      "name": "Lluvia",
+      "icon": "🌧️",
+      "description": "Condiciones de lluvia que afectan el tráfico"
+    },
+    "hora_pico": {
+      "name": "Hora Pico",
+      "icon": "⏰",
+      "description": "Horas de mayor congestión vehicular"
+    },
+    "paro": {
+      "name": "Paro de Transporte",
+      "icon": "🚫",
+      "description": "Paro o huelga del transporte público"
+    }
+  }
+}

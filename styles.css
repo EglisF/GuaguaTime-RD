@@ -1,0 +1,463 @@
+:root {
+    --bg: #ffffff;
+    --card: #f8fafc;
+    --text: #0f172a;
+    --muted: #6b7280;
+    --accent: #16a34a;  /* Verde en lugar de azul */
+    --success: #15803d;
+    --warning: #d97706; /* Amarillo/naranja */
+    --danger: #dc2626;
+    --glass: rgba(255, 255, 255, 0.6);
+    --radius: 12px;
+    --gap: 1rem;
+    --max-width: 1100px;
+    --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+[data-theme="dark"] {
+    --bg: #0b1220;
+    --card: #081426;
+    --text: #e6eef8;
+    --muted: #9aa8bf;
+    --accent: #22c55e;  /* Verde más brillante para dark */
+    --success: #16a34a;
+    --warning: #f59e0b; /* Amarillo para dark */
+    --danger: #ef4444;
+    --glass: rgba(255, 255, 255, 0.03);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: var(--font-sans);
+    background: linear-gradient(135deg, var(--bg) 0%, #f0fdf4 100%);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    padding: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.app {
+    width: 100%;
+    max-width: var(--max-width);
+}
+
+/* Header con bandera dominicana inspirada */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--accent);
+}
+
+.header-content h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--warning) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-icon {
+    background: var(--glass);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s;
+    backdrop-filter: blur(10px);
+}
+
+.btn-icon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Layout */
+main {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: var(--gap);
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr;
+        padding-bottom: 3rem;
+    }
+}
+
+/* Cards con nuevo diseño */
+.card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: 0 8px 25px rgba(2, 6, 23, 0.08);
+    border: 1px solid rgba(22, 163, 74, 0.1);
+    margin-bottom: var(--gap);
+    backdrop-filter: blur(10px);
+}
+
+.card h2 {
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-left: 4px solid var(--accent);
+    padding-left: 0.75rem;
+}
+
+/* Form mejorado */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+label {
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-weight: 500;
+}
+
+select, input, button {
+    font-size: 0.95rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid rgba(22, 163, 74, 0.2);
+    background: var(--bg);
+    color: var(--text);
+    transition: all 0.2s;
+}
+
+select:focus, input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+}
+
+.btn {
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent) 0%, #15803d 100%);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(22, 163, 74, 0.3);
+}
+
+/* Sort Controls */
+.sort-control {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.sort-btn {
+    background: transparent;
+    border: 1px solid rgba(22, 163, 74, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    color: var(--muted);
+}
+
+.sort-btn.active {
+    background: linear-gradient(135deg, var(--accent) 0%, #15803d 100%);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-2px);
+}
+
+.sort-btn:hover:not(.active) {
+    background: rgba(22, 163, 74, 0.1);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* Route Cards - Diseño mejorado */
+.route-card {
+    background: var(--card);
+    border: 1px solid rgba(22, 163, 74, 0.1);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.route-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--warning) 100%);
+}
+
+.route-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(2, 6, 23, 0.15);
+    border-color: var(--accent);
+}
+
+.route-card.favorite {
+    outline: 3px solid rgba(245, 158, 11, 0.3);
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, rgba(22, 163, 74, 0.05) 100%);
+}
+
+.route-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.route-type {
+    font-weight: 600;
+    padding: 0.3rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.type-concho {
+    background: rgba(22, 163, 74, 0.15);
+    color: var(--success);
+    border: 1px solid rgba(22, 163, 74, 0.3);
+}
+
+.type-guagua {
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--warning);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.type-motoconcho {
+    background: rgba(220, 38, 38, 0.15);
+    color: var(--danger);
+    border: 1px solid rgba(220, 38, 38, 0.3);
+}
+
+.type-carro-publico {
+    background: rgba(139, 69, 19, 0.15);
+    color: #8b4513;
+    border: 1px solid rgba(139, 69, 19, 0.3);
+}
+
+.star {
+    cursor: pointer;
+    font-size: 1.25rem;
+    transition: transform 0.2s;
+}
+
+.star:hover {
+    transform: scale(1.3);
+}
+
+/* Stats mejorados */
+.route-stats {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.stat {
+    background: linear-gradient(135deg, rgba(22, 163, 74, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%);
+    padding: 0.75rem;
+    border-radius: 8px;
+    min-width: 80px;
+    text-align: center;
+    flex: 1;
+    border: 1px solid rgba(22, 163, 74, 0.1);
+}
+
+.stat-value {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--accent);
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 0.25rem;
+}
+
+/* Mini Map mejorado */
+.mini-map {
+    background: linear-gradient(90deg, rgba(22, 163, 74, 0.05), transparent);
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    border: 1px solid rgba(22, 163, 74, 0.1);
+}
+
+/* Empty State con nuevo diseño */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem 2rem;
+    color: var(--muted);
+    text-align: center;
+}
+
+.empty-state svg {
+    opacity: 0.5;
+    color: var(--accent);
+}
+
+/* Alerts con nuevos colores */
+.alert {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    border-left: 4px solid;
+}
+
+.alert-warning {
+    background: rgba(245, 158, 11, 0.1);
+    border-color: var(--warning);
+    color: var(--warning);
+}
+
+.alert-info {
+    background: rgba(22, 163, 74, 0.1);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* Favorites mejorado */
+.favorites-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.favorite-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(22, 163, 74, 0.05) 0%, rgba(245, 158, 11, 0.05) 100%);
+    border: 1px solid rgba(22, 163, 74, 0.1);
+    transition: all 0.2s;
+}
+
+.favorite-item:hover {
+    transform: translateX(4px);
+    border-color: var(--accent);
+}
+
+.btn-remove {
+    background: transparent;
+    border: 1px solid rgba(220, 38, 38, 0.3);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: var(--danger);
+    transition: all 0.2s;
+}
+
+.btn-remove:hover {
+    background: var(--danger);
+    color: white;
+}
+
+/* Footer mejorado */
+footer {
+    text-align: center;
+    padding: 2rem 0 1rem;
+    margin-top: 2rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(22, 163, 74, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .header-content h1 {
+        font-size: 1.4rem;
+    }
+    
+    .route-stats {
+        justify-content: center;
+    }
+    
+    .stat {
+        min-width: 70px;
+    }
+    
+    .card {
+        padding: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn, .btn-icon, .sort-btn, select, input {
+        min-height: 44px;
+    }
+    
+    .sort-control {
+        justify-content: center;
+    }
+    
+    .header-content h1 {
+        font-size: 1.2rem;
+    }
+}
